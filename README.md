@@ -24,14 +24,12 @@ Exploratory analysis of shelter dog characteristics, focusing on age, behavior, 
 ### Spotify Analysis
 Exploratory data analysis of music trends, including genre distribution, popularity patterns, and artist performance.
 
-
-
 ---
 
 ## Tools & Technologies
 
 - Python (Pandas, NumPy)
-- Data visualization (Matplotlib, Seaborn
+- Data visualization (Matplotlib, Seaborn)
 - Streamlit
 - Jupyter Notebook
 
