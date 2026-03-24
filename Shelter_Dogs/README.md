@@ -1,82 +1,83 @@
+# Shelter Dogs — Exploratory Data Analysis
 
-Shelter Dogs — EDA & Machine Learning Project
+## Overview
 
-Overview
+This project explores a dataset of shelter dogs available for adoption in Hungary.  
+The dataset includes demographic, physical, and behavioral characteristics such as age, breed, size, coat, and social traits.
 
-This project explores a dataset of shelter dogs and builds a machine-learning model that predicts whether a dog is good with children based on various characteristics such as breed, size, age, energy level, coat color and more.
+The goal of the analysis is to better understand the structure of the shelter population and identify key patterns in dog characteristics.
 
-The project includes:
+---
 
-Exploratory Data Analysis (EDA)
+## Dataset
 
-Data cleaning and preprocessing
+Source: https://www.kaggle.com/datasets/jmolitoris/adoptable-dogs/data  
 
-Feature engineering
+The dataset contains information about nearly 3,000 dogs, including:
 
-Machine-learning model (Random Forest)
+- demographic features (age, sex, breed)
+- physical characteristics (size, color, coat)
+- behavioral traits (interaction with people, children, other animals)
+- additional attributes related to shelter records
 
-Experiment 1 - model comparison
+---
 
-Model evaluation (classification report, confusion matrix, feature importance)
+## Methodology
 
-Example inference on a new dog profile
+The analysis follows a structured exploratory approach:
 
-Dataset
+### 1. Data Preparation
+- handling missing values  
+- cleaning and selecting relevant features  
 
-The dataset comes from Kaggle:
-Shelter Dogs Dataset
-🔗 https://www.kaggle.com/datasets/\
-<your-dataset-link>
+### 2. Age Distribution
+- analysis of dominant age groups  
 
-It contains information on dogs available for adoption, including:
+### 3. Physical Characteristics
+- size distribution  
+- coat and color analysis  
 
-breed
+### 4. Social Behavior
+- interaction with people and children  
 
-sex
+### 5. Social Compatibility
+- relationships between behavioral traits  
 
-size
+### 6. Breed Distribution
+- identification of dominant breeds  
 
-age
+---
 
-coat color
+## Key Insights
 
-energy level
+- The shelter population is concentrated within specific age groups, rather than evenly distributed across all life stages.
+- Most dogs are friendly toward people, but compatibility with children is more selective and varies across individuals.
+- Behavioral traits are not fully aligned — dogs that like people do not always like children.
+- Physical characteristics are highly imbalanced: short-coated and medium-to-large dogs dominate the dataset.
+- A small number of colors and breeds account for a large share of the population, while many categories appear rarely.
+- The dataset shows strong concentration effects, which may influence interpretation and limit generalization.
 
-behavior labels
+---
 
-adoption-related features
+## Conclusions
 
-Repository Structure
+The analysis highlights that shelter dog populations are shaped by a limited number of dominant physical and behavioral profiles.
 
-```text
-shelter-dogs-ml/
-│
-├── notebooks/
-│   └── Shelter_Dogs.ipynb       # main notebook: EDA + models
-│
-├── data/
-│   └── dogs.csv                 # (optional) dataset or a sample
-│
-├── requirements.txt             # Python dependencies
-└── README.md
+No single characteristic is sufficient to assess suitability for adoption. Instead, a combination of traits should be considered when evaluating dogs and matching them with potential adopters.
 
-Model
+---
 
-The final model is a RandomForestClassifier with class balancing:
+## Tools & Libraries
 
-RandomForestClassifier(
-    n_estimators=200,
-    class_weight="balanced",
-    random_state=42
-)
+- Python  
+- Pandas  
+- NumPy  
+- Matplotlib  
+- Seaborn  
 
+---
 
-Why RandomForest?
+## Project Structure
 
-handles categorical features well (after encoding)
-
-robust to outliers
-
-performs well without heavy hyperparameter tuning
-
-
+- Shelter_Dogs.ipynb
+- README.md
